@@ -8,14 +8,20 @@ const bussiinesss = {
     private: false
 };
 
-const a = prompt('Whats your job?', ''),
-      b = prompt('How much money do you make?', 0),
-      c = prompt('Why your salary so low?', ''),
-      d = prompt('How much would you like to earn?', '');
+for (let i = 0; i < 2; i++) {
+        const a = prompt('Whats your job?', ''),
+        b = prompt('How much money do you make?', 0);
 
+    if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+        bussiinesss.job[a] = b;
+        console.log('Done');
+    } else {
+        console.log('Error');
+        i--;
+    }
 
-bussiinesss.job[a] = b;
-bussiinesss.job[c] = d;
+}
 
 console.log(bussiinesss);
+
 
